@@ -3,6 +3,8 @@
 // متوقف / قديم / جديد), series detail with seasons and episodes.
 
 import SwiftUI
+import AVKit
+import AVFoundation
 
 struct LibraryView: View {
     @EnvironmentObject var store: AppStore
