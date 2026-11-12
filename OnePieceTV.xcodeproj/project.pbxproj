@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7AAAE7FA82670952FD592E1A /* OnePieceTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5951343BF2C20BEC490C660C /* OnePieceTVApp.swift */; };
+		D1B1E93CC8825EE71A6BC9AF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661D9556DF03AAF6C506DE37 /* Models.swift */; };
+		79A252195D9D5093B4571E96 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE7E475CEFB5B452B8C6745 /* Search.swift */; };
+		59261E2FE788BDA8EF6E1CBA /* Nilesat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ECD8E34417552F5957F868 /* Nilesat.swift */; };
+		834F77D49A375523138339F7 /* XtreamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DB98C0604BD22C1B3841B /* XtreamAPI.swift */; };
+		5CC0D972A739984FFFBD4091 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AECA1A62FDCFAB3C18606F7 /* Store.swift */; };
+		28D7A3FAEB4023405679CCB4 /* Dubbing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F95752E9C9F19A071C5C113 /* Dubbing.swift */; };
+		8670E44AB7C514F5A4F898BC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80D07352C2D1B7E2484AF3 /* PlayerView.swift */; };
+		1CB61EFA8150446E28595406 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4E2298F6E664E8DE5938A4 /* LoginView.swift */; };
+		D059F620CA7002D934505318 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851B3B4BE62DD4B03B2B33C /* HomeView.swift */; };
+		1E5119C0D20F2B88AED82F5F /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C338DCB4E373ED96C2A590C1 /* LibraryView.swift */; };
+		C77878C85CD0B2D47C204512 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D465E2AD17E435AB1A512 /* SettingsView.swift */; };
+		F533077732FDE75F7831EE1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C7B89ECC8D9987D35F3D33 /* Assets.xcassets */; };
+		39F0CB4658B2BE851CBA63B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866FFD5C351D6C2D8CE9BE3 /* AVFoundation.framework */; };
+		9D2F8F4E583AA55879D517C9 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F0CB547FA4191B4E726563 /* AVKit.framework */; };
+		4E76A17470AC996C393A06CB /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E974A7A34FF1A4A421952BB /* Speech.framework */; };
+		38CFC0CC5A6D288133C7ACE2 /* Translation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07AA853E34A8BD7CFFFBF190 /* Translation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		47B68EF3408BA4CB5996301B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316F8FE042C02C1E7ADF6AD3 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5951343BF2C20BEC490C660C /* OnePieceTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePieceTVApp.swift; sourceTree = "<group>"; };
+		661D9556DF03AAF6C506DE37 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		ADE7E475CEFB5B452B8C6745 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		A7ECD8E34417552F5957F868 /* Nilesat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nilesat.swift; sourceTree = "<group>"; };
+		898DB98C0604BD22C1B3841B /* XtreamAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XtreamAPI.swift; sourceTree = "<group>"; };
+		6AECA1A62FDCFAB3C18606F7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		2F95752E9C9F19A071C5C113 /* Dubbing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dubbing.swift; sourceTree = "<group>"; };
+		7A80D07352C2D1B7E2484AF3 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		DB4E2298F6E664E8DE5938A4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6851B3B4BE62DD4B03B2B33C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C338DCB4E373ED96C2A590C1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		5E7D465E2AD17E435AB1A512 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		55C7B89ECC8D9987D35F3D33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B8F2B2D2F7C4D03B93EA304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06839C85D729079AC649E812 /* OnePieceTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnePieceTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A866FFD5C351D6C2D8CE9BE3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F7F0CB547FA4191B4E726563 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		5E974A7A34FF1A4A421952BB /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
+		07AA853E34A8BD7CFFFBF190 /* Translation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Translation.framework; path = System/Library/Frameworks/Translation.framework; sourceTree = SDKROOT; };
+		316F8FE042C02C1E7ADF6AD3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46B38D01E0D08E07F9224C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39F0CB4658B2BE851CBA63B3 /* AVFoundation.framework in Frameworks */,
+				9D2F8F4E583AA55879D517C9 /* AVKit.framework in Frameworks */,
+				4E76A17470AC996C393A06CB /* Speech.framework in Frameworks */,
+				38CFC0CC5A6D288133C7ACE2 /* Translation.framework in Frameworks */,
+				47B68EF3408BA4CB5996301B /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E6A3E7B28B0A38D0D89EE47 = {
+			isa = PBXGroup;
+			children = (
+				95F2FF848307352E1D2A9DC9 /* OnePieceTV */,
+				C7A1F8830F5D4EBEDEAB51FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95F2FF848307352E1D2A9DC9 /* OnePieceTV */ = {
+			isa = PBXGroup;
+			children = (
+				5951343BF2C20BEC490C660C /* OnePieceTVApp.swift */,
+				661D9556DF03AAF6C506DE37 /* Models.swift */,
+				ADE7E475CEFB5B452B8C6745 /* Search.swift */,
+				A7ECD8E34417552F5957F868 /* Nilesat.swift */,
+				898DB98C0604BD22C1B3841B /* XtreamAPI.swift */,
+				6AECA1A62FDCFAB3C18606F7 /* Store.swift */,
+				2F95752E9C9F19A071C5C113 /* Dubbing.swift */,
+				7A80D07352C2D1B7E2484AF3 /* PlayerView.swift */,
+				DB4E2298F6E664E8DE5938A4 /* LoginView.swift */,
+				6851B3B4BE62DD4B03B2B33C /* HomeView.swift */,
+				C338DCB4E373ED96C2A590C1 /* LibraryView.swift */,
+				5E7D465E2AD17E435AB1A512 /* SettingsView.swift */,
+				6B8F2B2D2F7C4D03B93EA304 /* Info.plist */,
+				55C7B89ECC8D9987D35F3D33 /* Assets.xcassets */,
+			);
+			path = OnePieceTV;
+			sourceTree = "<group>";
+		};
+		C7A1F8830F5D4EBEDEAB51FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06839C85D729079AC649E812 /* OnePieceTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0DE215E6341A2A4F8B8CC8EE /* OnePieceTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1BAA138D562ECBAF2333D2 /* Build configuration list for PBXNativeTarget "OnePieceTV" */;
+			buildPhases = (
+				08BF8DEB9E9F6F96B29C0723 /* Sources */,
+				46B38D01E0D08E07F9224C26 /* Frameworks */,
+				413342A563B5EFAEAF64FDB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnePieceTV;
+			productName = OnePieceTV;
+			productReference = 06839C85D729079AC649E812 /* OnePieceTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1C2F30CF0B19DCF276F4962 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					0DE215E6341A2A4F8B8CC8EE = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = DEB04BFFB0BEE7309099918E /* Build configuration list for PBXProject "OnePieceTV" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ar;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ar,
+				en,
+				Base,
+			);
+			mainGroup = 9E6A3E7B28B0A38D0D89EE47;
+			productRefGroup = C7A1F8830F5D4EBEDEAB51FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0DE215E6341A2A4F8B8CC8EE /* OnePieceTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		413342A563B5EFAEAF64FDB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F533077732FDE75F7831EE1B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08BF8DEB9E9F6F96B29C0723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AAAE7FA82670952FD592E1A /* OnePieceTVApp.swift in Sources */,
+				D1B1E93CC8825EE71A6BC9AF /* Models.swift in Sources */,
+				79A252195D9D5093B4571E96 /* Search.swift in Sources */,
+				59261E2FE788BDA8EF6E1CBA /* Nilesat.swift in Sources */,
+				834F77D49A375523138339F7 /* XtreamAPI.swift in Sources */,
+				5CC0D972A739984FFFBD4091 /* Store.swift in Sources */,
+				28D7A3FAEB4023405679CCB4 /* Dubbing.swift in Sources */,
+				8670E44AB7C514F5A4F898BC /* PlayerView.swift in Sources */,
+				1CB61EFA8150446E28595406 /* LoginView.swift in Sources */,
+				D059F620CA7002D934505318 /* HomeView.swift in Sources */,
+				1E5119C0D20F2B88AED82F5F /* LibraryView.swift in Sources */,
+				C77878C85CD0B2D47C204512 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1114E2773EA03139C88C1A67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFS_STRING = "";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7817693E8B49915C656F54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFS_STRING = "";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		341583BB6040072A29013C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OnePieceTV/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maro.iptv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		869428CA8DD0DC707CE258F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OnePieceTV/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maro.iptv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMBED_LIBRARIES_WITH_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEB04BFFB0BEE7309099918E /* Build configuration list for PBXProject "OnePieceTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1114E2773EA03139C88C1A67 /* Debug */,
+				BF7817693E8B49915C656F54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1BAA138D562ECBAF2333D2 /* Build configuration list for PBXNativeTarget "OnePieceTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341583BB6040072A29013C72 /* Debug */,
+				869428CA8DD0DC707CE258F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1C2F30CF0B19DCF276F4962 /* Project object */;
+}
