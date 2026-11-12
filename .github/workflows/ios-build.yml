@@ -1,0 +1,86 @@
+# iOS build — unsigned IPA for sideloading (no Mac, no paid Apple account)
+#
+# What this does:
+#   1. Checks out the project on a GitHub-hosted macOS runner.
+#   2. Builds the app with xcodebuild, code signing DISABLED.
+#   3. Packages the unsigned .app as an .ipa artifact.
+#   4. The user then signs + installs that .ipa on his own iPhone with
+#      AltStore / SideStore / Sideloadly using his own FREE Apple ID
+#      (7-day certificate, re-sign weekly — see docs/RESEARCH.md).
+#
+# Why unsigned: signing an IPA on CI needs an Apple Developer account
+# ($99/yr) + certificates. For sideload-only, the signature comes from
+# the user's own Apple ID at install time — nothing Apple-related is
+# needed in CI, and no Apple credentials ever go into GitHub.
+#
+# Cost: GitHub-hosted macOS runners are FREE for public repositories.
+# On a private repo, macOS minutes are billed (~$0.062/min, ~5-8 min
+# per build). Keep the repo PUBLIC to stay at $0.
+#
+# Xcode pinning: the runner image's default Xcode moves over time.
+# This workflow selects the newest Xcode 26.x found on the runner and
+# fails loudly if none exists, instead of silently building with an
+# old toolchain.
+
+name: iOS build (unsigned IPA)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'OnePieceTV/**'
+      - 'OnePieceTV.xcodeproj/**'
+      - '.github/workflows/ios-build.yml'
+
+jobs:
+  build:
+    runs-on: macos-26
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 26.x
+        run: |
+          ls /Applications | grep -i '^Xcode_' || true
+          XCODE_APP=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | sort -V | tail -n 1)
+          if [ -z "$XCODE_APP" ]; then
+            echo "::error::No Xcode 26.x found on this runner. Available:"; ls /Applications | grep -i xcode || true
+            exit 1
+          fi
+          echo "Using $XCODE_APP"
+          sudo xcode-select -s "$XCODE_APP"
+          xcodebuild -version
+
+      - name: Build (unsigned, Release, device SDK)
+        run: |
+          xcodebuild \
+            -project OnePieceTV.xcodeproj \
+            -scheme OnePieceTV \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH=$(find DerivedData/Build/Products/Release-iphoneos -name 'OnePieceTV.app' -maxdepth 1 | head -n 1)
+          if [ -z "$APP_PATH" ]; then echo "::error::OnePieceTV.app not found"; exit 1; fi
+          # Strip any residual signatures (unsigned build should have none,
+          # but a stray _CodeSignature breaks sideload re-signing).
+          find "$APP_PATH" -name '_CodeSignature' -type d -exec rm -rf {} + || true
+          find "$APP_PATH" -name '*.mobileprovision' -delete || true
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r OnePieceTV-unsigned.ipa Payload
+          ls -lh OnePieceTV-unsigned.ipa
+
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: OnePieceTV-unsigned-ipa
+          path: OnePieceTV-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 30
