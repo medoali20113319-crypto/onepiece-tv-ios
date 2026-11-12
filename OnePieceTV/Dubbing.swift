@@ -151,7 +151,8 @@ final class DubbingEngine: ObservableObject {
         let abl = bufferList.pointee
         guard abl.mNumberBuffers > 0 else { return }
         let buf = abl.mBuffers
-        guard let data = buf.mData else { return }
+        guard buf.mDataByteSize > 0 else { return }
+        let data = buf.mData
         let bytes = Data(bytes: data, count: Int(buf.mDataByteSize))
         Task { @MainActor in self.feedPCM(bytes, frameCount: frameCount) }
     }
@@ -178,7 +179,7 @@ final class DubbingEngine: ObservableObject {
         inBuf.frameLength = AVAudioFrameCount(frames)
         bytes.withUnsafeBytes { raw in
             guard let base = raw.baseAddress else { return }
-            inBuf.floatChannelData?.pointee?.update(from: base.assumingMemoryBound(to: Float.self), count: frames * 2)
+            inBuf.floatChannelData?.pointee.update(from: base.assumingMemoryBound(to: Float.self), count: frames * 2)
         }
         guard let outBuf = AVAudioPCMBuffer(pcmFormat: dstFormat, frameCapacity: AVAudioFrameCount(frames / 3 + 16)) else { return }
         var error: NSError?
@@ -213,11 +214,11 @@ final class DubbingEngine: ObservableObject {
     private func translateAndSpeak(_ english: String) async {
         guard isActive else { return }
         var arabic: String?
-        if #available(iOS 18, *) {
+        // TranslationSession(installedSource:target:) needs iOS 26+ in
+        // this SDK; on older iOS dubbing stays off (same rule as Android).
+        if #available(iOS 26, *) {
             #if canImport(Translation)
             do {
-                // iOS 18 API: the Configuration-based init does not exist
-                // in this SDK (only init(installedSource:target:)).
                 let session = TranslationSession(
                     installedSource: Locale.Language(identifier: "en"),
                     target: Locale.Language(identifier: "ar"))
