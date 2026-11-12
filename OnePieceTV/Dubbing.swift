@@ -216,10 +216,11 @@ final class DubbingEngine: ObservableObject {
         if #available(iOS 18, *) {
             #if canImport(Translation)
             do {
-                let config = TranslationSession.Configuration(
-                    source: Locale.Language(identifier: "en"),
+                // iOS 18 API: the Configuration-based init does not exist
+                // in this SDK (only init(installedSource:target:)).
+                let session = TranslationSession(
+                    installedSource: Locale.Language(identifier: "en"),
                     target: Locale.Language(identifier: "ar"))
-                let session = try await TranslationSession(configuration: config)
                 let response = try await session.translate(english)
                 arabic = response.targetText
             } catch {
