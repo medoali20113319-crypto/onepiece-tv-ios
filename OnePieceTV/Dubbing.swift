@@ -125,8 +125,9 @@ final class DubbingEngine: ObservableObject {
             prepare: { _, _, _ in },
             unprepare: { _ in },
             process: { tap, numberFrames, flags, bufferListInOut, numberFramesOut, flagsOut in
+                // MTAudioProcessingTapGetStorage returns a non-optional
+                // pointer in this SDK — no guard-let on it.
                 let ctx = MTAudioProcessingTapGetStorage(tap)
-                guard let ctx = ctx else { return }
                 let engine = Unmanaged<DubbingEngine>.fromOpaque(ctx).takeUnretainedValue()
                 engine.handleTapFrames(bufferListInOut, frameCount: numberFrames)
             })
@@ -151,8 +152,8 @@ final class DubbingEngine: ObservableObject {
         let abl = bufferList.pointee
         guard abl.mNumberBuffers > 0 else { return }
         let buf = abl.mBuffers
-        guard buf.mDataByteSize > 0 else { return }
-        let data = buf.mData
+        // AudioBuffer.mData IS optional in this SDK — guard-let is correct.
+        guard buf.mDataByteSize > 0, let data = buf.mData else { return }
         let bytes = Data(bytes: data, count: Int(buf.mDataByteSize))
         Task { @MainActor in self.feedPCM(bytes, frameCount: frameCount) }
     }
